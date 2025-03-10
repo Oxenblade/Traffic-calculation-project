@@ -66,16 +66,7 @@ print(Time_list.count(12))
 
 
 
-''''import csv
 
-filename = "traffic_data15062024.csv"
-
-with open (filename, "r" ) as traffic:
-    csv_reader = csv.reader(traffic)
-
-    header = next(csv_reader)
-    print("header:", header)
-    My_list=[]
 
 
     for row in csv_reader:
