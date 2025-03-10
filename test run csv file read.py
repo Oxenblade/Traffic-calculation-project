@@ -50,6 +50,8 @@ print(len(My_fouth_list))
 print(percentage_value_of_scooters)
 print(Time_list.count(12))
 
+print(type(Time_list[0]))
+
 
 
 
@@ -137,3 +139,4 @@ with open(filename, "r") as traffic:
 
 
     
+
