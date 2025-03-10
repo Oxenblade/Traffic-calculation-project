@@ -26,7 +26,8 @@ with open (filename, "r" ) as traffic:
             My_third_list.append(i[8])
         if i[0] == "Hanley Highway/Westway":
             My_fouth_list.append(i[8])
-        Time_list.append(i[2])
+        if (i[2]>= "00:00:00" and i[2]<= "01:00:00") and (i[0] == "Elm Avenue/Rabbit Road") :
+            Time_list.append(i[8])
         
     two_wheel_vechicles = My_list.count("Bicycle"), My_list.count ("Motorcycle"), My_list.count("Scooter")
     
@@ -48,9 +49,9 @@ print(len(Vehicles))
 print(len(My_third_list))
 print(len(My_fouth_list))
 print(percentage_value_of_scooters)
-print(Time_list.count(12))
 
-print(type(Time_list[0]))
+
+print(Time_list)
 
 
 
