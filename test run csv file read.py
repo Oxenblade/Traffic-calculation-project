@@ -15,7 +15,7 @@ with open (filename, "r" ) as traffic:
     My_fouth_list=[]
     Time_list= []
     for i in csv_reader:
-        My_list.append(i[8])
+        '''My_list.append(i[8])
         My_second_list.append(i[9])
         
         if ( i[0] == "Elm Avenue/Rabbit Road" and i[4] == "N"):
@@ -25,10 +25,10 @@ with open (filename, "r" ) as traffic:
         if i[0] == "Elm Avenue/Rabbit Road":
             My_third_list.append(i[8])
         if i[0] == "Hanley Highway/Westway":
-            My_fouth_list.append(i[8])
+            My_fouth_list.append(i[8])'''
         Time_list.append(i[2])
         
-    two_wheel_vechicles = My_list.count("Bicycle"), My_list.count ("Motorcycle"), My_list.count("Scooter")
+    '''two_wheel_vechicles = My_list.count("Bicycle"), My_list.count ("Motorcycle"), My_list.count("Scooter")
     
     number =  My_list.count("Truck")/ len(My_list)
     Percentage = "{:.0%}".format(number)
@@ -47,7 +47,7 @@ print(round(average_number))
 print(len(Vehicles))
 print(len(My_third_list))
 print(len(My_fouth_list))
-print(percentage_value_of_scooters)
+print(percentage_value_of_scooters)'''
 print(Time_list.count(12))
 
 
