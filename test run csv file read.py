@@ -5,7 +5,8 @@ filename = "traffic_data15062024.csv"
 with open (filename, "r" ) as traffic:
     
     csv_reader = csv.reader(traffic)
-    
+
+#intializing variables 
     headerline = next(traffic)
     My_list = []
     My_second_list =[]
