@@ -6,7 +6,7 @@ with open (filename, "r" ) as traffic:
     
     csv_reader = csv.reader(traffic)
 
-#intializing variables 
+#intializing variables (to be initialized)
     headerline = next(traffic)
     My_list = []
     My_second_list =[]
@@ -28,7 +28,7 @@ with open (filename, "r" ) as traffic:
         if i[0] == "Hanley Highway/Westway":
             My_fouth_list.append(i[8])
         Time_list.append(i[2])
-        
+     #calculations   
     two_wheel_vechicles = My_list.count("Bicycle"), My_list.count ("Motorcycle"), My_list.count("Scooter")
     
     number =  My_list.count("Truck")/ len(My_list)
