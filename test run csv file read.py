@@ -5,6 +5,9 @@ filename = "traffic_data15062024.csv"
 with open (filename, "r" ) as traffic:
     
     csv_reader = csv.reader(traffic)
+
+
+    #first initialization - Initial comments 
     
     headerline = next(traffic)
     My_list = []
@@ -103,7 +106,7 @@ with open (filename, "r" ) as traffic:
             Total_Time_list.append([len(i[8])])
             
 
-            
+    #calculations        
     two_wheel_vechicles = My_list.count("Bicycle"), My_list.count ("Motorcycle"), My_list.count("Scooter")
     
     number =  My_list.count("Truck")/ len(My_list)
@@ -139,6 +142,7 @@ print(Total_Time_list)
 
 
 
+#Commented out code 
 
 
 
