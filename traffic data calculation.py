@@ -1,6 +1,6 @@
 import csv
 
-filename = "traffic_data21062024.csv" # open karanawa csv file eka
+filename = "traffic_data21062024.csv"  # open karanawa csv file eka
 
 with open (filename, "r" ) as traffic:
     
