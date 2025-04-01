@@ -6,7 +6,7 @@ with open (filename, "r" ) as traffic:
     
     csv_reader = csv.reader(traffic)
     
-    headerline = next(traffic)# csv file eke heading api skip karanawa
+    headerline = next(traffic) # csv file eke heading api skip karanawa
     My_list = []
     My_second_list =[]
     New_list=[]
@@ -15,7 +15,7 @@ with open (filename, "r" ) as traffic:
     My_fouth_list=[]
 
     Total_Time_list=[]
-    rain_hours_list=[]# meka rain eke hours string widiyata append karanna hadapu ekak
+    rain_hours_list=[] # meka rain eke hours string widiyata append karanna hadapu ekak
     
 
     count = 0 # meka api ganne total rain hours hoyanna
@@ -25,7 +25,7 @@ with open (filename, "r" ) as traffic:
         My_list.append(i[8])
         My_second_list.append(i[9])
 
-  #meka vechicle calculation ekata adala if conditions   
+  # meka vechicle calculation ekata adala if conditions   
         if ( i[0] == "Elm Avenue/Rabbit Road" and i[4] == "N"):
             New_list.append(i[8])
         if  i[6]< i[7]:
@@ -38,13 +38,13 @@ with open (filename, "r" ) as traffic:
         if i[0] == "Hanley Highway/Westway":
             Total_Time_list.append(i[2][0:2])
 
-  #rain eka calculate karana if statement 2:
+  # rain eka calculate karana if statement 2:
         if i[5] == "Heavy Rain":
             rain_hours_list.append(i[2][0:2])    
         if i[5] == "Light Rain":
             rain_hours_list.append(i[2][0:2])
             
-   #meka vechicle calculation ekata adala list specifically total vechicles gana hoyanna:
+   # meka vechicle calculation ekata adala list specifically total vechicles gana hoyanna:
             
     Total_Vehicle_list = [ Total_Time_list.count("0:"),
             Total_Time_list.count("00"),            
@@ -73,7 +73,7 @@ with open (filename, "r" ) as traffic:
             Total_Time_list.count("23"),
             Total_Time_list.count("24")]
     
-    #meka total rain hours gana hoyanna hadapu list ekak, meken ara repeated strings count karanawa:
+    # meka total rain hours gana hoyanna hadapu list ekak, meken ara repeated strings count karanawa:
     
     total_rain_hours = [ rain_hours_list.count("0:"),
             rain_hours_list.count("00"),            
@@ -101,12 +101,12 @@ with open (filename, "r" ) as traffic:
             rain_hours_list.count("23"),
             rain_hours_list.count("24")]
 
-    #me for loop eken wenne uda thiyena repeated strings calculated karala +1 ekak denawa count ekata list eke eka index ekaka value eka 1ta wada wadinam:
+    # me for loop eken wenne uda thiyena repeated strings calculated karala +1 ekak denawa count ekata list eke eka index ekaka value eka 1ta wada wadinam:
     for i in total_rain_hours:
         if i >1:
             count += 1
 
-    #me thiyenne vechicle calculation ekata adala variebles and maths calculations        
+    # me thiyenne vechicle calculation ekata adala variebles and maths calculations        
     two_wheel_vechicles = My_list.count("Bicycle"), My_list.count ("Motorcycle"), My_list.count("Scooter")
     
     number =  My_list.count("Truck")/ len(My_list)
